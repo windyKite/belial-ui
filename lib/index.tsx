@@ -1,3 +1,6 @@
+import React from 'react'
+import reactDOM from 'react-dom'
+
 const x: string = 'belialUI'
 const y: number = 13
 
