@@ -6,6 +6,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
  */
 
 module.exports = {
+  mode: 'development',
   entry: {
     belialUI: path.resolve(__dirname, './lib/index.tsx')
   },
@@ -14,6 +15,9 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     library: 'Belial-UI',
     libraryTarget: 'umd'
+  },
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js', '.jsx'],
   },
   module: {
     rules: [
@@ -29,5 +33,4 @@ module.exports = {
       template: 'index.html'
     })
   ],
-  mode: 'development',
 }
