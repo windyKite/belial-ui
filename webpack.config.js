@@ -5,13 +5,12 @@ const path = require('path')
  */
 
 module.exports = {
-  mode: 'development',
   entry: {
     belialUI: path.resolve(__dirname, './lib/index.tsx')
   },
   output: {
     filename: 'belialUI.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'dist/lib'),
     library: 'Belial-UI',
     libraryTarget: 'umd'
   },

@@ -4,7 +4,7 @@ const commonConfig = require('./webpack.config')
  * @type {import('webpack').Configuration}
  */
 
-module.exports = Object.assign(commonConfig, {
+module.exports = Object.assign({}, commonConfig, {
   mode: 'production',
   externals: {
     react: {

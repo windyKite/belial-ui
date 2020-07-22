@@ -1,9 +1,5 @@
 import React from 'react'
-import reactDOM from 'react-dom'
+import ReactDOM from 'react-dom'
+import Button from './button'
 
-const x: string = 'belialUI'
-const y: number = 13
-
-console.log(x)
-console.log(y)
-console.log(name)
+ReactDOM.render(<Button/>, document.getElementById('root'))
