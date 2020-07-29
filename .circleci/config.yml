@@ -29,6 +29,9 @@ jobs:
           path: test-results
       - store_artifacts:
           path: test-results
+      - store_artifacts:
+          path: coverage
+
 workflows:
     build-and-test:
       jobs:
