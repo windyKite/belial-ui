@@ -6,7 +6,7 @@ module.exports = Object.assign({}, baseJestConfig, {
     [
       "jest-junit",
       {
-        outputDirectory: ".test-results/jest",
+        outputDirectory: "test-results/jest",
         outputName: "results.xml",
       },
     ]

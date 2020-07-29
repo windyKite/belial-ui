@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="1" failures="0" time="5.121">
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2020-07-29T09:51:34" time="3.526" tests="1">
+    <testcase classname=" 这是 Icon 的 dom 测试" name=" 这是 Icon 的 dom 测试" time="0.032">
+    </testcase>
+  </testsuite>
+</testsuites>
