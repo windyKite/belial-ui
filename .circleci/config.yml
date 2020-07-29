@@ -27,6 +27,8 @@ jobs:
       - run: yarn ci
       - store_test_results:
           path: test-results
+      - store_artifacts:
+          path: ./reports/junit
 workflows:
     build-and-test:
       jobs:
