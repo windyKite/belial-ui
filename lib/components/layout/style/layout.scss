@@ -1,0 +1,41 @@
+.belial-layout {
+  display: flex;
+  flex-direction: column;
+
+  & > & {
+    flex-direction: row;
+  }
+
+  &-header {
+    height: 64px;
+    padding: 0 50px;
+    line-height: 64px;
+  }
+
+  &-content {
+    padding: 0 50px;
+    flex: auto;
+  }
+
+  &-footer {
+    height: 64px;
+    padding: 0 50px;
+  }
+
+  &-has-aside {
+    flex-direction: row;
+
+    > .belial-layout {
+      flex-direction: column;
+      flex: 1;
+
+      // &-aside {
+      //   flex: 1;
+      // }
+
+      // &-content {
+      //   flex: 2;
+      // }
+    }
+  }
+}
