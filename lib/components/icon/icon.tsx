@@ -1,6 +1,6 @@
 import * as React from "react";
 import classnames from "classnames";
-import "../utils/importIcons";
+import "../../utils/importIcons";
 import "./style";
 
 interface IconProps extends React.SVGProps<SVGSVGElement> {
