@@ -1,7 +1,7 @@
 import React from "react";
 import classnames from "classnames";
 import { tuple } from "../../utils/type";
-import { Icon } from "../icon";
+import Icon from "../icon";
 import './style'
 
 const ButtonTypes = tuple("default", "primary", "dashed", "danger", "link");
