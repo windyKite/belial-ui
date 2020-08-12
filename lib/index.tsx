@@ -1,1 +1,1 @@
-export * as Icon from './components/icon'
+export * from './components'
