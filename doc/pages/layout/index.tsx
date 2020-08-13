@@ -1,30 +1,182 @@
-import Layout from "../../../lib/components/layout/index";
-import React from "react";
-import "./layoutDoc.scss";
+import React from 'react';
+import CodeShow from '../../components/CodeCard';
+// import { Layout } from '.';
+import './index.scss';
+import { Layout } from '../../../lib/index';
+const { Header, Content, Footer, Aside } = Layout
 
-const { Header, Content, Footer, Aside } = Layout;
+const DemoLayout = () => {
+	return (
+		<div className="example-layout">
+			<CodeShow
+				title="示例1"
+				code={`
+        <Layout>
+          <Header
+            className='text-center-center light'
+            style={{ height: '60px' }}
+          >Header</Header>
+          <Content
+            className='text-center-center dark'
+            style={{ height: '120px' }}
+          >Content</Content>
+          <Footer
+            className='text-center-center light'
+            style={{ height: '60px' }}
+          >Footer</Footer>
+        </Layout>
+      `}
+			>
+				<Layout className="fill-width">
+					<Header
+						className="text-center-center light"
+						style={{ height: '60px' }}
+					>
+						Header
+					</Header>
+					<Content
+						className="text-center-center dark"
+						style={{ height: '120px' }}
+					>
+						Content
+					</Content>
+					<Footer
+						className="text-center-center light"
+						style={{ height: '60px' }}
+					>
+						Footer
+					</Footer>
+				</Layout>
+			</CodeShow>
 
-export default function () {
-  return (
-    <div>
-      <div className="demo1">
-        <Layout className="layout">
-          <Aside className="aside">Aside</Aside>
+			<CodeShow
+				title="示例2"
+				code={`
+        <Layout>
+          <Header
+            style={{ height: '60px' }}
+            className='text-center-center light'
+          >Header</Header>
+          <Layout style={{ height: '120px' }}>
+            <Aside
+              className='text-center-center light-dark'
+            >Aside</Aside>
+            <Content
+              className='text-center-center dark'
+            >Content</Content>
+          </Layout>
+          <Footer
+            className='text-center-center light'
+            style={{ height: '60px' }}
+          >Footer</Footer>
+        </Layout>
+      `}
+				style={{ marginTop: 30 }}
+			>
+				<Layout className="fill-width">
+					<Header
+						style={{ height: '60px' }}
+						className="text-center-center light"
+					>
+						Header
+					</Header>
+					<Layout style={{ height: '120px' }}>
+						<Aside className="text-center-center light-dark">Aside</Aside>
+						<Content className="text-center-center dark">Content</Content>
+					</Layout>
+					<Footer
+						className="text-center-center light"
+						style={{ height: '60px' }}
+					>
+						Footer
+					</Footer>
+				</Layout>
+			</CodeShow>
+
+			<CodeShow
+				title="示例3"
+				code={`
+        <Layout>
+          <Header
+            style={{ height: '60px' }}
+            className='text-center-center light'
+          >Header</Header>
+          <Layout style={{ height: '120px' }}>
+            <Content
+              className='text-center-center dark'
+            >Content</Content>
+            <Aside
+              className='text-center-center light-dark'
+            >Aside</Aside>
+          </Layout>
+          <Footer
+            style={{ height: '60px' }}
+            className='text-center-center light'
+          >Footer</Footer>
+        </Layout>
+      `}
+				style={{ marginTop: 30 }}
+			>
+				<Layout className="fill-width">
+					<Header
+						style={{ height: '60px' }}
+						className="text-center-center light"
+					>
+						Header
+					</Header>
+					<Layout style={{ height: '120px' }}>
+						<Content className="text-center-center dark">Content</Content>
+						<Aside className="text-center-center light-dark">Aside</Aside>
+					</Layout>
+					<Footer
+						style={{ height: '60px' }}
+						className="text-center-center light"
+					>
+						Footer
+					</Footer>
+				</Layout>
+			</CodeShow>
+
+			<CodeShow
+				title="示例4"
+				code={`
+        <Layout style={{ height: '240px' }}>
+          <Aside className='text-center-center light-dark'>Aside</Aside>
           <Layout>
-            <Header className="header">Header</Header>
-            <Content className="content">Content</Content>
-            <Footer className="footer">Footer</Footer>
+            <Header style={{ height: '60px' }} className='text-center-center light'>Header</Header>
+            <Content style={{ height: '120px' }} className='text-center-center dark'>Content</Content>
+            <Footer style={{ height: '60px' }} className='text-center-center light'>Footer</Footer>
           </Layout>
         </Layout>
-      </div>
+      `}
+				style={{ marginTop: 30 }}
+			>
+				<Layout style={{ height: '240px' }} className="fill-width">
+					<Aside className="text-center-center light-dark">Aside</Aside>
+					<Layout>
+						<Header
+							style={{ height: '60px' }}
+							className="text-center-center light"
+						>
+							Header
+						</Header>
+						<Content
+							style={{ height: '120px' }}
+							className="text-center-center dark"
+						>
+							Content
+						</Content>
+						<Footer
+							style={{ height: '60px' }}
+							className="text-center-center light"
+						>
+							Footer
+						</Footer>
+					</Layout>
+				</Layout>
+			</CodeShow>
+		</div>
+	);
+};
 
-      <div className="demo1">
-        <Layout>
-          <Header>Header</Header>
-          <Content>Content</Content>
-          <Footer>Footer</Footer>
-        </Layout>
-      </div>
-    </div>
-  );
-}
+export default DemoLayout;
